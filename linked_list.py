@@ -40,6 +40,18 @@ class LinkedList:
                 current=current.next_node
         return None
         
+    def insert_node(self,insert,position):
+        if position == 0:
+            self.add_list(insert)
+        pass 
+        
+        
+        
+        
+        
+        
+        
+        
     def __repr__(self):
         
         nodes=[]
@@ -55,8 +67,6 @@ class LinkedList:
                 
             current=current.next_node
         return '->' .join(nodes)
-    
-        
- 
+
                     
                 
