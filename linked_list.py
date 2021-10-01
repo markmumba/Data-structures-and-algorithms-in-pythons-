@@ -14,12 +14,12 @@ class LinkedList:
         self.head = None
         
     def is_empty(self):
-        return self.head==None
-    
+        return self.head is None
+
     def know_size(self):
         current=self.head
         count=0
-        while current !=None:
+        while current is not None:
             count +=1
             current=current.next_node
         return count
@@ -33,7 +33,7 @@ class LinkedList:
     def search_list(self,target):
         current=self.head
         
-        while current !=None:
+        while current is not None:
             if current.data == target:
                 return current
             else:
@@ -57,7 +57,7 @@ class LinkedList:
         nodes=[]
         current=self.head
         
-        while current !=None:
+        while current is not None:
             if current is self.head:
                 nodes.append("[Head %s]" % current.data)
             if current.next_node is None:

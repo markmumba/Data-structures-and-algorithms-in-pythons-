@@ -6,10 +6,11 @@ def binary_search(listed, target):
         midpoint=(first+last)//2
         if listed[midpoint] == target:
             return midpoint
-        elif target>listed[midpoint]:
-            first=midpoint+1
         else:
-            last=midpoint-1
+            if target>listed[midpoint]:
+                return binary_search(listed[midpoint + 1:],target)
+            else:
+                return binary_search(listed[:midpoint - 1],target)
             
     return None 
 
